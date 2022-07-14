@@ -38,8 +38,8 @@
                 <c:when test='${param.uname.equalsIgnoreCase("admin") && param.psw.equalsIgnoreCase("password")}'>
                     <p> username is ${param.uname}</p>
                     <p> password is ${param.psw}</p>
-                    <%request.getRequestDispatcher("profile.jsp").forward(request,response);%>
-<%--                    <%response.sendRedirect("/profile.jsp");%>--%>
+<%--                    <%request.getRequestDispatcher("profile.jsp").forward(request,response);%>--%>
+                    <%response.sendRedirect("/profile.jsp");%>
 
                 </c:when>
 

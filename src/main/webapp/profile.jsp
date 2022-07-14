@@ -13,10 +13,11 @@
     <title>Title</title>
 
 </head>
-<body>
+<body class="container col-12">
 
-<h1 class=".fs-1 position-absolute top-50 start-50 translate-middle text-warning">!!!!!!!!!KIND OF WORKS!!!!!!!!!</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque ducimus laborum modi sint temporibus! Animi assumenda cumque dicta doloribus earum est, exercitationem, harum inventore ipsum maxime nobis praesentium quidem suscipit?</p>
+
+<h1 class="fs-1 position-absolute top-50 start-50 translate-middle text-warning">!!!!!!!!!KIND OF WORKS!!!!!!!!!</h1>
+<p class="col-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque ducimus laborum modi sint temporibus! Animi assumenda cumque dicta doloribus earum est, exercitationem, harum inventore ipsum maxime nobis praesentium quidem suscipit?</p>
 
 </body>
 </html>

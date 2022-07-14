@@ -1,6 +1,15 @@
 body{
-    background-color: blue;
+    /*background-color: blue;*/
+    background-image: url("/img/scorpion.jpeg");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    background-color: transparent;
 }
+container{
+
+}
+
 h1{
     background-color: red;
     font-size: xx-large;

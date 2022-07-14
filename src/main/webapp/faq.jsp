@@ -1,5 +1,6 @@
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%--
   Created by IntelliJ IDEA.
   User: samuelmartinez
   Date: 7/13/22
@@ -43,6 +44,13 @@
     <p>Your favorite color is: ${param.color}</p>  // this works without assigning String color //
 
 <p> ${numbers}</p>
+
+    <% request.setAttribute("numbers", new int[]{1, 2, 3, 4, 5, 6, 7}); %>
+    <ul>
+        <c:forEach items="${numbers}" var="n">
+            <li>${n}</li>
+        </c:forEach>
+    </ul>
 
 <%--<p> ${trails}</p>--%>
 <ul>

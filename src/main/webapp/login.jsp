@@ -8,18 +8,17 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<% String username = request.getParameter("username");
-   String password = request.getParameter("password");
-%>
-
 <html>
 <head>
     <title>Title</title>
 
-<link href="css/style.css" rel="stylesheet" type="text/css">
 
+</head>
+<%@include file="partials/head.jsp"%>
 <body>
-    <form action="login.jsp" method="post">
+
+<%@include file="partials/nabvar.jsp"%>
+    <form action="/login.jsp" method="post">
         <div class="imgcontainer">
             <img src="" alt="Avatar" class="">
         </div>
@@ -30,24 +29,33 @@
             <label ><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
             <button type="submit">Login</button>
-
-            <c:choose>
-                <c:when test='${param.username.equalsIgnoreCase("admin")}'>
-                    <p> username is ${param.username}</p>
-                </c:when>
-<%--                <c:when test='${param.password.equalsIgnoreCase("password")}'>--%>
-<%--                    <p> password is ${param.password}</p>--%>
-<%--                </c:when>--%>
-<%--                <p>its not working</p>--%>
-<%--                <%response.sendRedirect("/profile.jsp");%>--%>
-                <c:otherwise>
-<%--                    <%response.sendRedirect("/profile");%>--%>
-                </c:otherwise>
-            </c:choose>
         </div>
     </form>
-</head>
+
+            <c:if test="${param.uname || param.psw != null}">
+
+            <c:choose>
+                <c:when test='${param.uname.equalsIgnoreCase("admin") && param.psw.equalsIgnoreCase("password")}'>
+                    <p> username is ${param.uname}</p>
+                    <p> password is ${param.psw}</p>
+                    <%request.getRequestDispatcher("profile.jsp").forward(request,response);%>
+<%--                    <%response.sendRedirect("/profile.jsp");%>--%>
+
+                </c:when>
+
+                <c:otherwise>
+
+                    <%
+//                        request.getRequestDispatcher()
+                        response.sendRedirect("/hello-world");%>
+
+                </c:otherwise>
+            </c:choose>
+            </c:if>
 
 
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
 </body>
 </html>

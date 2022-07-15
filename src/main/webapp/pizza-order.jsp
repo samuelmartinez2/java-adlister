@@ -5,14 +5,43 @@
   Time: 11:20 AM
   To change this template use File | Settings | File Templates.
 --%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<%
 
-        String address = request.getParameter("address");
+<form action="pizza-order" method="POST">
+<div class="form-check">
+    <input class="form-check-input" type="checkbox" name="test" value="test" id="flexCheckDefault">
+    <label class="form-check-label" for="flexCheckDefault">
+        Default checkbox 1
+    </label>
+</div>
+<div class="form-check">
+    <input class="form-check-input" type="checkbox" name="test" value="test2" id="flexCheckChecked" checked>
+    <label class="form-check-label" for="flexCheckChecked">
+        Checked checkbox 2
+    </label>
+</div>
+    <div class="card-body">
+        <span class="input-group-text">ADDRESS</span>
+        <textarea  name="name" value=${name} class="form-control" aria-label="With textarea"></textarea>
+    </div>
+    <button type="submit" class="btn btn-Warning btn-lg" >  Button</button>
+</form>
 
 
-%>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!doctype html>
 <html>
@@ -56,6 +85,7 @@
     </div>
 </nav>
 <main class="container">
+    <form action="pizza-order" method="POST">
     <section class="jumbotron d-none d-md-flex">
         <h2 class="bg-light p-2 text-dark bg-opacity-75 w-100 text-center">Welcome to Pizza World!</h2>
     </section>
@@ -247,25 +277,30 @@
                             Featured
                         </div>
                         <div class="card-body">
-                        <form>
+
                             <span class="input-group-text">ADDRESS</span>
-                            <textarea class="form-control" aria-label="With textarea"></textarea>
-                        </form>
+                            <textarea  name="name" value="name" class="form-control" aria-label="With textarea"></textarea>
+
                         </div>
                     </div>
                 </div>
 
 
-
                 <footer class="card-footer d-flex justify-content-end">
                     <button class="btn btn-primary me-1"><i class="fa-solid fa-circle-chevron-left"></i> Previous Step</button>
-                    <form action="login.jsp" method="POST">
-                        <button class="btn btn-primary" action="/login.jsp"><i class="fa-solid fa-cart-shopping"></i> Checkout</button>
-                    </form>
+
+
+
+
+
+
+                        <button class="btn btn-primary" type="submit"><i class="fa-solid fa-cart-shopping"></i> Checkout</button>
+
                 </footer>
             </div>
         </div>
     </div>
+    </form>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

@@ -24,7 +24,7 @@
 </div>
     <div class="card-body">
         <span class="input-group-text">ADDRESS</span>
-        <textarea  name="name" value=${name} class="form-control" aria-label="With textarea"></textarea>
+        <textarea name="name" class="form-control" aria-label="With textarea" placeholder="address here">  </textarea>
     </div>
     <button type="submit" class="btn btn-Warning btn-lg" >  Button</button>
 </form>
@@ -277,10 +277,8 @@
                             Featured
                         </div>
                         <div class="card-body">
-
                             <span class="input-group-text">ADDRESS</span>
-                            <textarea  name="name" value="name" class="form-control" aria-label="With textarea"></textarea>
-
+                            <textarea name="name" class="form-control" aria-label="With textarea" placeholder="address here">  </textarea>
                         </div>
                     </div>
                 </div>

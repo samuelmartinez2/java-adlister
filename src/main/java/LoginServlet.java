@@ -16,8 +16,6 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect("/profile");
         }
 
-
-
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {

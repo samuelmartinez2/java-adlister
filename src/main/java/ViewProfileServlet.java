@@ -11,11 +11,11 @@ public class ViewProfileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
         req.setAttribute("username", session.getAttribute("username"));
-        if (session.getAttribute("username")== null){
+        if (session.getAttribute("username") == null) {
             resp.sendRedirect("/login");
-            return;
-        }
+        } else {
 
-        req.getRequestDispatcher("WEB-INF/profile.jsp").forward(req, resp);
+            req.getRequestDispatcher("WEB-INF/profile.jsp").forward(req, resp);
+        }
     }
 }
